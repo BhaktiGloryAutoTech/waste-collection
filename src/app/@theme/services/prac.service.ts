@@ -7,7 +7,7 @@ import { Observable } from "rxjs";
 export class PracService {
   constructor(private _http: HttpClient) {}
 
-  public baseUrl = "http://waste-collector.herokuapp.com/api/poc/";
+  public baseUrl = "https://waste-collector.herokuapp.com/api/poc/";
 
   private handleError(err: HttpErrorResponse) {
     console.log(err.message);
