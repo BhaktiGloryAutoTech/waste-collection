@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="wastage-head">
+                <h1 class="text-center Wastage-txt">Summary Report</h1>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+                <label class="label-form">Doctor</label>
+                <ng-select [items]="doctorName" bindLabel="drname" bindValue="drid" placeholder="Select Doctor"
+                    (change)="selectedDoctorId($event)" (clear)="clearData()" class="summary-select">
+                </ng-select>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <div class="form-group">
+                <label class="label-form">Date</label>
+                <div>
+                    <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" [(ngModel)]="dateSelected"
+                        class="form-control">
+                    <owl-date-time (afterPickerClosed)="change(dt1)" [pickerType]="'calendar'" #dt1></owl-date-time>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div *ngIf="flag">
+        <nb-card>
+            <nb-card-header>Summary</nb-card-header>
+            <nb-card-body>
+                <div>
+                    <ngx-datatable [rows]="summary" [headerHeight]="31" [rowHeight]="34" [footerHeight]="31">
+                        <ngx-datatable-column name="Black" prop="Black"></ngx-datatable-column>
+                        <ngx-datatable-column name="Blue" prop="Blue"></ngx-datatable-column>
+                        <ngx-datatable-column name="Red" prop="Red"></ngx-datatable-column>
+                        <ngx-datatable-column name="Yellow" prop="Yellow"></ngx-datatable-column>
+                        <ngx-datatable-column name="Date" prop="created_date"></ngx-datatable-column>
+                    </ngx-datatable>
+
+                </div>
+            </nb-card-body>
+        </nb-card>
+    </div>
+
+    <div *ngIf="flagemp">
+        <nb-card>
+            <nb-card-header>Summary</nb-card-header>
+            <nb-card-body>
+                <nb-accordion>
+                    <nb-accordion-item *ngFor="let doc of doctorName" (click)="toggle(doc.drid)">
+                        <nb-accordion-item-header>{{doc.drname}}</nb-accordion-item-header>
+                        <nb-accordion-item-body>
+                            <div>
+                                <ngx-datatable [rows]="docSummary" class="material" [rowHeight]="34" [headerHeight]="31"
+                                    [footerHeight]="31">
+                                    <ngx-datatable-column name="Black" prop="Black"></ngx-datatable-column>
+                                    <ngx-datatable-column name="Blue" prop="Blue"></ngx-datatable-column>
+                                    <ngx-datatable-column name="Red" prop="Red"></ngx-datatable-column>
+                                    <ngx-datatable-column name="Yellow" prop="Yellow"></ngx-datatable-column>
+                                    <ngx-datatable-column name="Date" prop="created_date"></ngx-datatable-column>
+                                </ngx-datatable>
+                            </div>
+                        </nb-accordion-item-body>
+                    </nb-accordion-item>
+                </nb-accordion>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>

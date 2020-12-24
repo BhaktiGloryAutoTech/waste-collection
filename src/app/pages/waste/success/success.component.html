@@ -1,0 +1,15 @@
+<nb-card>
+    <nb-card-header>
+        <div class="wastage-head">
+            <h1 class="text-center Wastage-txt">Added Successfully</h1>
+        </div>
+    </nb-card-header>
+</nb-card>
+<script>
+    $(document).ready(function () {
+        function disableBack() { window.history.forward() }
+
+        window.onload = disableBack();
+        window.onpageshow = function (evt) { if (evt.persisted) disableBack() }
+    });
+</script>
