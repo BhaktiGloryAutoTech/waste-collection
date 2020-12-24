@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <div class="wastage-head">
+
+                <h1 class="text-center Wastage-txt">{{drName}}<br>Wastage Collection</h1>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <form #wasteform="ngForm">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="dustbin-img">
+                        <img src="../../../../assets/img/yellow.png" class="img-responsive img-h-w cardItem" alt="" />
+                    </div>
+                    <div class="form-group">
+                        <div class="question">
+                            <input type="text" id="name" name="yellow" class="form-control input-kg" required
+                                [(ngModel)]="yellow" />
+                            <label>Enter weight</label>
+                            <div class="input-name">
+                                <div class="text-center">Kg.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="dustbin-img">
+                        <img src="../../../../assets/img/red.png" class="img-responsive img-h-w cardItem" alt="" />
+                    </div>
+                    <div class="form-group">
+                        <div class="question">
+                            <input type="text" id="name" name="red" class="form-control" required [(ngModel)]="red" />
+                            <label>Enter weight</label>
+                            <div class="input-name">
+                                <div class="text-center">Kg.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="dustbin-img">
+                        <img [src]="'assets/img/blue.png'" class="img-responsive img-h-w cardItem" alt="" />
+                    </div>
+                    <div class="form-group">
+                        <div class="question">
+                            <input type="text" pattern="[0-9]" id="name" name="blue" class="form-control" required
+                                [(ngModel)]="blue" />
+                            <label>Enter weight</label>
+                            <div class="input-name">
+                                <div class="text-center">Kg.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="dustbin-img">
+                        <img src="../../../../assets/img/black.png" class="img-responsive img-h-w cardItem" alt="" />
+                    </div>
+                    <div class="form-group">
+                        <div class="question">
+                            <input type="text" id="name" name="black" class="form-control" required
+                                [(ngModel)]="black" />
+                            <label>Enter weight</label>
+                            <div class="input-name">
+                                <div class="text-center">Kg.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="sub-btn">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group actions text-center pd-t-b">
+                            <!-- <button type="button" class="btn btn-primary btn-submit" id="Register" >
+                  Submit</button> -->
+                            <button
+                                class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s btn-relative"
+                                data-text="Submit" (click)="onSubmit()">
+                                <span>Submit</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

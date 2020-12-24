@@ -1,12 +1,10 @@
-import { NgModule } from '@angular/core';
-import { NbMenuModule } from '@nebular/theme';
-import { ThemeModule } from '../@theme/theme.module';
-import { PagesComponent } from './pages.component';
-import { PagesRoutingModule } from './pages-routing.module';
-import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
-import { QualityModule } from './quality/quality.module';
-import { WasteModule } from './waste/waste.module';
-
+import { NgModule } from "@angular/core";
+import { NbMenuModule } from "@nebular/theme";
+import { ThemeModule } from "../@theme/theme.module";
+import { PagesComponent } from "./pages.component";
+import { PagesRoutingModule } from "./pages-routing.module";
+import { MiscellaneousModule } from "./miscellaneous/miscellaneous.module";
+import { QualityModule } from "./quality/quality.module";
 
 @NgModule({
   imports: [
@@ -15,14 +13,9 @@ import { WasteModule } from './waste/waste.module';
     NbMenuModule,
     QualityModule,
     MiscellaneousModule,
-    WasteModule
   ],
-  declarations: [
-    PagesComponent,
-    
-  ],
- 
+  declarations: [PagesComponent],
+
   providers: [],
 })
-export class PagesModule {
-}
+export class PagesModule {}
