@@ -3,7 +3,14 @@
         <div class="col-md-12 col-12">
             <div class="wastage-head">
 
-                <h1 class="text-center Wastage-txt">{{drName}}<br>Wastage Collection</h1>
+                <h1 class="text-center">Wastage Collection</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <div class="">
+                <h3 class="text-center Wastage-txt">Dr. {{drName}}</h3>
             </div>
         </div>
     </div>
@@ -12,13 +19,13 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-6">
                     <div class="dustbin-img">
-                        <img src="../../../../assets/img/yellow.png" class="img-responsive img-h-w cardItem" alt="" />
+                        <img src="../../../../assets/img/yellow.png" class="img-responsive img-h-w cardItem" alt=""
+                            (click)="focusOnInput('yellow')" />
                     </div>
                     <div class="form-group">
                         <div class="question">
-                            <input type="text" id="name" name="yellow" class="form-control input-kg" required
-                                [(ngModel)]="yellow" />
-                            <label>Enter weight</label>
+                            <input type="number" id="yellow" name="yellow" class="form-control input-kg" required
+                                [(ngModel)]="yellow" placeholder="Enter Weight" />
                             <div class="input-name">
                                 <div class="text-center">Kg.</div>
                             </div>
@@ -27,12 +34,13 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-6">
                     <div class="dustbin-img">
-                        <img src="../../../../assets/img/red.png" class="img-responsive img-h-w cardItem" alt="" />
+                        <img src="../../../../assets/img/red.png" class="img-responsive img-h-w cardItem" alt=""
+                            (click)="focusOnInput('red')" />
                     </div>
                     <div class="form-group">
                         <div class="question">
-                            <input type="text" id="name" name="red" class="form-control" required [(ngModel)]="red" />
-                            <label>Enter weight</label>
+                            <input type="number" id="red" name="red" class="form-control" required [(ngModel)]="red"
+                                placeholder="Enter Weight" />
                             <div class="input-name">
                                 <div class="text-center">Kg.</div>
                             </div>
@@ -41,13 +49,13 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-6">
                     <div class="dustbin-img">
-                        <img [src]="'assets/img/blue.png'" class="img-responsive img-h-w cardItem" alt="" />
+                        <img [src]="'assets/img/blue.png'" class="img-responsive img-h-w cardItem" alt=""
+                            (click)="focusOnInput('blue')" />
                     </div>
                     <div class="form-group">
                         <div class="question">
-                            <input type="text" pattern="[0-9]" id="name" name="blue" class="form-control" required
-                                [(ngModel)]="blue" />
-                            <label>Enter weight</label>
+                            <input type="number" id="blue" name="blue" class="form-control" required [(ngModel)]="blue"
+                                placeholder="Enter Weight" />
                             <div class="input-name">
                                 <div class="text-center">Kg.</div>
                             </div>
@@ -56,13 +64,13 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-6">
                     <div class="dustbin-img">
-                        <img src="../../../../assets/img/black.png" class="img-responsive img-h-w cardItem" alt="" />
+                        <img src="../../../../assets/img/black.png" class="img-responsive img-h-w cardItem" alt=""
+                            (click)="focusOnInput('black')" />
                     </div>
                     <div class="form-group">
                         <div class="question">
-                            <input type="text" id="name" name="black" class="form-control" required
-                                [(ngModel)]="black" />
-                            <label>Enter weight</label>
+                            <input type="number" id="black" name="black" class="form-control" required
+                                [(ngModel)]="black" placeholder="Enter Weight" />
                             <div class="input-name">
                                 <div class="text-center">Kg.</div>
                             </div>
