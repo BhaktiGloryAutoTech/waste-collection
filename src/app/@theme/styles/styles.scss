@@ -1212,7 +1212,7 @@ form .question input[type="text"]:valid ~ label {
   .input-name .text-center{
     font-size: 12px;
   }
-  .wastage-head .text-center{
+  .wastage-head .wastage-c{
     background: #222b45;
     color: #fff;
     font-size: 18px;
@@ -1222,14 +1222,23 @@ form .question input[type="text"]:valid ~ label {
   .btn-submit-ducstbin{
     padding: 0;
   }
+  .datatable-header-cell-template-wrap{
+    text-align: center;
+  }
+  .visible{
+    overflow-x: scroll;
+  }
+  .ngx-datatable .datatable-header{
+    overflow: unset!important;
+  }
 
 }
 
 @media (min-width: 768px){
-  .wastage-head .text-center{
+  .wastage-head .wastage-c{
     margin-top: 0;
   }
-  .wastage-head .text-center{
+  .wastage-head .wastage-c{
     background: #222b45;
     color: #fff;
     font-size: 26px;
@@ -1248,6 +1257,9 @@ form .question input[type="text"]:valid ~ label {
   }
   .Wastage-txt{
     margin: 7px 0 33px;
+  }
+  .main-data-table .ngx-datatable{
+    display: flex !important;
   }
 }
 

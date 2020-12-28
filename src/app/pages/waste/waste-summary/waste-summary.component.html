@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="wastage-head">
-                <h1 class="text-center Wastage-txt">Summary Report</h1>
+                <h1 class="text-center">Summary Report</h1>
             </div>
         </div>
         <div class="col-md-6 col-xs-12">
@@ -30,8 +30,8 @@
         <nb-card>
             <nb-card-header>Summary</nb-card-header>
             <nb-card-body>
-                <div>
-                    <ngx-datatable [rows]="summary" [headerHeight]="43" [rowHeight]="31" [footerHeight]="31">
+                <div class="text-center">
+                    <ngx-datatable [rows]="summary" [headerHeight]="43" [rowHeight]="31" [footerHeight]="31" class="table-responsive">
                         <ngx-datatable-column name="Black" prop="Black"></ngx-datatable-column>
                         <ngx-datatable-column name="Blue" prop="Blue"></ngx-datatable-column>
                         <ngx-datatable-column name="Red" prop="Red"></ngx-datatable-column>
@@ -50,11 +50,11 @@
             <nb-card-body>
                 <nb-accordion>
                     <nb-accordion-item *ngFor="let doc of doctorName" (click)="toggle(doc.drid)">
-                        <nb-accordion-item-header>{{doc.drname}}</nb-accordion-item-header>
+                        <nb-accordion-item-header class="text-capitalize">Dr, {{doc.drname}}</nb-accordion-item-header>
                         <nb-accordion-item-body>
-                            <div>
+                            <div class="text-center main-data-table">
                                 <ngx-datatable [rows]="docSummary" class="material" [rowHeight]="34" [headerHeight]="43"
-                                    [footerHeight]="31">
+                                    [footerHeight]="31" class="table-responsive">
                                     <ngx-datatable-column name="Black" prop="Black"></ngx-datatable-column>
                                     <ngx-datatable-column name="Blue" prop="Blue"></ngx-datatable-column>
                                     <ngx-datatable-column name="Red" prop="Red"></ngx-datatable-column>
