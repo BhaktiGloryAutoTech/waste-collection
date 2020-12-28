@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12 col-12">
             <div class="wastage-head">
@@ -7,6 +7,8 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container">
     <div class="row">
         <div class="col-md-12 col-12">
             <div class="">
@@ -14,6 +16,8 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container">
     <div class="content">
         <form #wasteform="ngForm">
             <div class="row">
@@ -86,7 +90,7 @@
                             <!-- <button type="button" class="btn btn-primary btn-submit" id="Register" >
                   Submit</button> -->
                             <button
-                                class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s btn-relative"
+                                class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s btn-relative btn-submit-ducstbin"
                                 data-text="Submit" (click)="onSubmit()">
                                 <span>Submit</span>
                             </button>
@@ -97,5 +101,6 @@
         </form>
     </div>
 </div>
+
 
 <router-outlet></router-outlet>
