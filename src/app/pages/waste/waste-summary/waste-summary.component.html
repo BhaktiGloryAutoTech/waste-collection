@@ -50,7 +50,7 @@
             <nb-card-body>
                 <nb-accordion>
                     <nb-accordion-item *ngFor="let doc of doctorName" (click)="toggle(doc.drid)">
-                        <nb-accordion-item-header class="text-capitalize">Dr, {{doc.drname}}</nb-accordion-item-header>
+                        <nb-accordion-item-header class="text-capitalize">Dr. {{doc.drname}}</nb-accordion-item-header>
                         <nb-accordion-item-body>
                             <div class="text-center main-data-table">
                                 <ngx-datatable [rows]="docSummary" class="material" [rowHeight]="34" [headerHeight]="43"
